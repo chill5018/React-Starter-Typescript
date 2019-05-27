@@ -36,6 +36,7 @@
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/addon-links": "^4.1.13",
     "@storybook/react": "^4.1.13",
+    "@svgr/webpack": "^4.2.0",
     "@types/enzyme": "^3.9.0",
     "@types/jest": "^24.0.9",
     "@types/node": "^11.10.4",

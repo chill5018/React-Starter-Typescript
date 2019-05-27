@@ -8,8 +8,7 @@ const config = {
     fs: "empty"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -27,6 +26,11 @@ const config = {
           },
         ],
       },
+      // More advanced SVG configs: https://www.robinwieruch.de/react-svg-icon-components/#react-svg-icon-components-webpack
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
       // fixes https://github.com/graphql/graphql-js/issues/1272
       {
         test: /\.mjs$/,
@@ -41,7 +45,7 @@ const config = {
     ]
   },
   resolve: {
-    extensions: ['*', '.mjs','.ts', '.tsx', '.js', '.jsx', '.json', '.gql', '.graphql']
+    extensions: ['*', '.mjs', '.ts', '.tsx', '.js', '.jsx', '.json', '.gql', '.graphql']
   },
   output: {
     path: commonPaths.outputPath,
